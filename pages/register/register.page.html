@@ -1,0 +1,57 @@
+<ion-header no-border>
+  <ion-toolbar color="success">
+    <ion-title>Regístrate</ion-title>
+    	<ion-buttons slot="start">
+    		<ion-back-button></ion-back-button>
+    	</ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<div class="">
+
+			<ion-item>
+				<ion-input type="text" placeholder="Nombre completo" [(ngModel)]="your_name
+				"></ion-input>
+			</ion-item>
+			
+			<ion-item>
+				<ion-input type="text" placeholder="Número de cédula" [(ngModel)]="username
+				"></ion-input>
+			</ion-item>
+			
+			<ion-item>
+	            <ion-label style="color:#999">Sexo</ion-label>
+	            <ion-select interface="popover" [(ngModel)]="gender">
+	              <ion-select-option value="female">Mujer</ion-select-option>
+	              <ion-select-option value="male">Hombre</ion-select-option>
+	            </ion-select>
+        	</ion-item>
+            
+            <ion-item style="color:#999">
+	          <ion-label>Fecha de nacimiento</ion-label>
+	          <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="date_birth" min="1994-03-14" max="2002-01-01"></ion-datetime>
+	        </ion-item>
+			
+			<ion-item>
+				<ion-input type="text" placeholder="E-mail" [(ngModel)]="email_address"></ion-input>
+			</ion-item>
+			
+			<ion-item>
+				<ion-input type="password" placeholder="Contraseña" [(ngModel)]="password"></ion-input>
+			</ion-item>
+			
+			<ion-item>
+				<ion-input type="password" placeholder="Confirma tu contraseña" [(ngModel)]="confirm_pass"></ion-input>
+			</ion-item>
+			
+			<ion-button expand="full" class="ion-padding" color="success" (click)="tryRegister()" [disabled]="disabledButton">Crear cuenta</ion-button>
+		</div>
+
+		<p class = "ion-padding info-1">
+			Registra tus datos para crear una nueva cuenta.<br/>
+		</p>
+
+	</ion-list>
+</ion-content>
